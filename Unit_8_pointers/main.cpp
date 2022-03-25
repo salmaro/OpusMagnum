@@ -6,9 +6,22 @@
 //
 
 #include <iostream>
+#include <vector>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+void outWords (vector<string>  *words);
+
+int main() {
+    vector<string> words{"Hello", "Word,", "Pointers", "are", "great", "!"};
+    outWords(&words);
+    cout<<endl;
     return 0;
+}
+
+void outWords (vector<string>  *words){
+    
+    for(auto element:*words){
+        cout<<element + " ";
+    }
+
 }
